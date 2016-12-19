@@ -88,8 +88,9 @@ export function cachedMap(Block) {
     })
     .map(map => {
       // re-order superBlocks result
-      const result = Object.keys(map.result).reduce((result, supName) => {
-        const index = map.entities.superBlock[supName].order;
+      const result = map.result.reduce((result, supName) => {
+
+        const index = map.entities['superBlock'][supName].order;
         result[index] = supName;
         return result;
       }, []);
