@@ -13,7 +13,7 @@ import navLinks from './links.json';
 import AvatarPointsNavItem from './Avatar-Points-Nav-Item.jsx';
 import NoPropsPassthrough from '../../utils/No-Props-Passthrough.jsx';
 
-const fCClogo = 'https://s3.amazonaws.com/freecodecamp/freecodecamp_logo.svg';
+const fCClogo = '/images/disasterhack.png';
 
 const toggleButtonChild = (
   <Col xs={ 12 }>
