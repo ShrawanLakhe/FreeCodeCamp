@@ -86,11 +86,13 @@ module.exports = function(User) {
         user.password = null;
       }
     }
-     next();
+    return next();
   });
+
   debug('setting up user hooks');
 
   User.beforeRemote('confirm', function(ctx, _, next) {
+
     if (!ctx.req.query) {
       return ctx.res.redirect('/');
     }
@@ -163,6 +165,7 @@ module.exports = function(User) {
         if (!exists) {
           return next();
         }
+
         req.flash('error', {
           msg: dedent`
       The ${req.body.email} email address is already associated with an account.
@@ -173,6 +176,7 @@ module.exports = function(User) {
         return res.redirect('/email-signin');
       })
       .catch(err => {
+        console.error(err);
         req.flash('error', {
           msg: 'Oops, something went wrong, please try again later'
         });
@@ -202,6 +206,7 @@ module.exports = function(User) {
     debug(info.accessToken.id);
     // requires AccessToken.belongsTo(User)
     var mailOptions = {
+      type: 'emaill',
       to: info.email,
       from: 'Team@freecodecamp.com',
       subject: 'Password Reset Request',

@@ -12,8 +12,8 @@
       "secure": true,
       "port": 465,
       "auth": {
-        "user": "",
-        "pass": ""
+        "user": "beaconmerce@gmail.com",
+        "pass": "PC4allusers"
       }
     }]
   }
