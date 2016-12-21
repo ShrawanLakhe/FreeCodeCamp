@@ -13,7 +13,7 @@
       "port": 465,
       "auth": {
         "user": "beaconmerce@gmail.com",
-        "pass": "PC4allusers"
+        "pass": ""
       }
     }]
   },
