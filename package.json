@@ -74,7 +74,7 @@
     "jsonlint-cli": "^1.0.1",
     "json-loader": "~0.5.2",
     "lodash": "^4.1.0",
-    "loopback": "^2.23.0",
+    "loopback": "2.23.0",
     "loopback-boot": "^2.13.0",
     "loopback-component-explorer": "^2.1.1",
     "loopback-component-passport": "^2.0.0",
